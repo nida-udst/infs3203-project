@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
+    <style>
+       div {
+        background-color: antiquewhite;
+       } 
+    </style>
+
+</head>
+<body>
+
+    <h2>Question Library</h2>
+
+    <form action="/" style="align-self: flex-end;">
+    <button> Add Question </button>
+    </form>
+
+    <table>
+    {% for question in library %}
+    <div>
+        <tr><td>Question: {{ question.question }}</td></tr>
+        <tr><td>Answer: {{ question.answer }}</td></tr>
+    </div>
+        
+        
+    {% endfor %}
+    </table>
+
+</body>
